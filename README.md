@@ -7,3 +7,4 @@
 
 4. Tạo 1 Trang MVC trong project Hiển thị các dữ liệu đã thêm vào Database ở bước 3 lên giao diện. (Sử dụng html ở bước 1)
 
+![alt](https://github.com/nguyennam1310/asp.net-mvc/blob/master/XEM-AN-CHOI.jpg)
