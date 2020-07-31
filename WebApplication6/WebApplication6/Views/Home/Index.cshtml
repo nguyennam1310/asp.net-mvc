@@ -1,0 +1,639 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>web</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <style>
+        .nav-link {
+            display: block;
+            padding: .5rem .4rem;
+            font-size: 14px;
+        }
+
+        .nav {
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            padding-left: 0;
+            margin-bottom: 0;
+            list-style: none;
+            background: #048b3c;
+        }
+        img.image {
+            width: 325px;
+            height: 240px;
+        }
+        a.nav-link {
+            color: white;
+        }
+
+        .border-1 {
+            border-left: solid .5px #c9c9c9;
+        }
+
+        .home {
+            padding: .5rem 25px;
+        }
+        li.nav-item:hover {
+            background-color: #d59829;
+        }
+        .img-one img {
+            margin-right: 15px;
+        }
+
+        .item-one {
+            display: inline-block;
+            margin-bottom: 30px;
+        }
+
+        .img-one {
+            float: left;
+        }
+        /*.content-new {
+            display: inline-block;
+            width: 385px;
+            margin-left: 15px;
+
+        }*/
+        .date {
+            font-size: 13px;
+            color: #c9c9c9;
+        }
+
+        .tieu-de-1 {
+            font-weight: 700;
+        }
+
+        .date1 {
+            float: right;
+            font-weight: 400;
+            color: #c9c9c9;
+            font-size: 13px;
+            line-height: 20px;
+            margin-right: 45px;
+        }
+
+        .tieu-de-2 {
+            font-weight: 700;
+            font-size: 14px;
+        }
+
+        .noi-dung-2 {
+            font-size: 14px;
+        }
+
+        .img-2 img {
+            width: 230px;
+        }
+
+        .breadcrumb {
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            padding: .75rem 1rem;
+            margin-bottom: 20px;
+            list-style: none;
+            background-color: #f6f6f6;
+            border-radius: 0;
+            margin-top: 20px;
+        }
+
+        .img-3 img {
+            width: 230px;
+            margin-right: 15px;
+        }
+
+        .item-3 {
+            display: inline-block;
+            padding: 20px 0px;
+            border-bottom: solid 0.5px #c9c9c9;
+        }
+
+        .img-3 {
+            float: left;
+        }
+
+        .content-new1 {
+            width: 730px;
+        }
+
+        .tin-xem-nhieu {
+            background-color: #f6f6f6;
+            margin: 20px 0;
+            border-top: solid 3px #048b3c;
+            border-bottom: solid 1px #048b3c;
+        }
+
+        .xem-nhieu.text-uppercase {
+            text-align: center;
+            padding: 20px 0;
+            font-size: 20px;
+        }
+
+        img.img-x {
+            width: 145px;
+            margin-left: 10px;
+        }
+
+        .col-md-6.new {
+            padding: 0;
+        }
+
+        .tin-xem-nhieu.row {
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            margin-right: 0;
+            margin-left: 0;
+        }
+
+        .tieu-de-4 {
+            margin: 10px;
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        .tieu-de-5 {
+            margin: 10px;
+            font-size: 15px;
+            font-weight: 700;
+        }
+
+        .row.blog {
+            margin: 0;
+        }
+
+        .chu-to {
+            float: left;
+            font-size: 30px;
+            line-height: 15px;
+            color: #429c60;
+        }
+
+            .chu-to:after {
+                display: inline-block;
+                padding-right: .5rem;
+                color: #6c757d;
+                content: "|";
+            }
+
+        .tin-tuc-nhanh {
+            padding: 15px 10px;
+            display: inline-block;
+            border-top: solid 0.5px #c9c9c9;
+        }
+
+        .chu-nho {
+            font-size: 14px
+        }
+
+        .noi-dung {
+            color: #429c60;
+        }
+
+        .tin-anh {
+            background-color: #f6f6f6;
+            border-top: solid 3px #048b3c;
+            border-bottom: solid 1px #048b3c;
+        }
+
+    
+
+        .anh {
+            text-align: center;
+        }
+
+            .anh img {
+                width: 330px;
+            }
+
+        #anh {
+            text-align: center;
+        }
+
+        .breadcrumb-item.active {
+            color: black;
+        }
+
+        .breadcrumb-item a {
+            color: #6c757d;
+        }
+
+        .next {
+            float: right;
+            margin-top: 50px;
+        }
+
+        .item-3s {
+            display: inline-block;
+            padding: 20px 0px;
+        }
+
+        .page-link {
+            position: relative;
+            display: block;
+            padding: .5rem .75rem;
+            margin-left: -1px;
+            line-height: 1.25;
+            color: black;
+            background-color: #fff;
+            border: 1px solid #dee2e6;
+        }
+
+        a#link {
+            font-size: 14px;
+            color: black;
+        }
+
+        h5.text-uppercase {
+            font-weight: 400;
+            color: #429c60;
+            font-size: 15px;
+        }
+
+        .footer {
+            background-color: #f6f6f6;
+            margin: -20px;
+            padding: 10px;
+        }
+
+        .logo-footer {
+            float: left;
+            margin-right: 20px;
+        }
+
+        #copy-right {
+            font-size: 14px;
+            color: #6c757d;
+        }
+
+        .copy {
+            margin-top: 50px;
+            margin-bottom: 20px;
+            padding-bottom: 40px;
+            border-bottom: solid 0.5px #c9c9c9;
+        }
+
+        .navbar-brand {
+            display: inline-block;
+            padding-top: .3125rem;
+            padding-bottom: .3125rem;
+            margin-right: 201px;
+            font-size: 1.25rem;
+            line-height: inherit;
+            white-space: nowrap;
+        }
+
+        .header-logo {
+            margin: 20px 0;
+        }
+
+        .advertisement-2 img {
+            width: 350px;
+            margin: 25px 0;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <div class="header-logo">
+                <a class="navbar-brand" id="logo" href="#">
+                    <img src="~/Img/logop.png"  alt="logo">
+                </a>
+                <a class="advertisement-1">
+                    <img src="~/Img/22.jpg">
+                </a>
+            </div>
+            <ul class="nav" id="nav">
+             
+                
+            </ul>
+
+        </div>
+    </div>
+    <div id="body">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="content">
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Xem-ăn-chơi</li>
+                            </ol>
+                        </nav>
+                        <div class="item-one" id="item-1">
+
+
+                        </div>
+                        <div class="row" id="item-2">
+
+                           
+
+                        </div>
+
+                        <div class="list" id="item-3">
+                       
+                        </div>
+
+                        <div class="next">
+                         
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="col-md-4">
+                    <div class="list">
+                        <div class="tin-xem-nhieu">
+                            <div class="xem-nhieu text-uppercase">xem nhiều nhất</div>
+                            <div class="row blog">
+                                <div class="col-md-6 new">
+                                    <a href=""><img class="img-x" src="~/Img/20.jpg"></a>
+                                    <div class="tieu-de-4">Hai nữ dinh bị tật axit thảm hại trên đường đi học về</div>
+                                </div>
+                                <div class="col-md-6 new">
+                                    <a href=""><img class="img-x" src="~/Img/19.jpg"></a>
+                                    <div class="tieu-de-4">Hai nữ dinh bị tật axit thảm hại trên đường đi học về</div>
+                                </div>
+
+
+                            </div>
+
+                            <div class="tin-tuc-nhanh">
+
+                                <div class="chu-to">1</div>
+                                <div class="chu-nho">Nữ sinh không thấy có lỗi nếu Midu - Phan Thành đổ vỡ</div>
+                            </div>
+                            <div class="tin-tuc-nhanh">
+                                <div class="chu-to">2</div>
+                                <div class="chu-nho">Ai bồi thường thiệt hại tài sản khi chung cư bị cháy?</div>
+                            </div>
+                            <div class="tin-tuc-nhanh">
+                                <div class="chu-to">3</div>
+                                <div class="chu-nho">Nữ sinh không thấy có lỗi nếu Midu - Phan Thành đổ vỡ</div>
+                            </div>
+                            <div class="tin-tuc-nhanh">
+                                <div class="chu-to">4</div>
+                                <div class="chu-nho">Ai bồi thường thiệt hại tài sản khi chung cư bị cháy?</div>
+                            </div>
+
+                        </div>
+
+
+
+                    </div>
+                    <div class="tin-anh">
+                        <div class="xem-nhieu text-uppercase">Tin ảnh</div>
+                        <div class="anh">
+                            <a href=""><img src="~/Img/18.jpg"></a>
+                        </div>
+                        <div class="tieu-de-5">
+                            Hơn 300 xe cháy rụi, hầm chung cư lộ cốt thép
+                        </div>
+                        <div id="anh">
+                            <a href=""><img src="~/Img/21.jpg"></a>
+                        </div>
+                    </div>
+                    <div class="advertisement-2">
+                        <a href=""><img src="~/Img/24.jpg"></a>
+                    </div>
+                    <div class="advertisement-2">
+                        <a href=""><img src="~/Img/25.jpg"></a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer">
+        <div class="container">
+            <footer class="page-footer font-small blue pt-4">
+
+                <div class="container-fluid text-center text-md-left">
+                    <div class="footer">
+
+                        <div class="row">
+
+                            <div class="col">
+
+
+                                <h5 class="text-uppercase">Thời sự xã hội</h5>
+
+                                <ul class="list-unstyled">
+                                    <li>
+                                        <a href="#!" id="link">Điểm nóng</a>
+                                    </li>
+                                    <li>
+                                        <a href="#!" id="link">Theo dòng sự kiện</a>
+                                    </li>
+                                    <li>
+                                        <a href="#!" id="link">Phóng sự</a>
+                                    </li>
+
+                                </ul>
+
+                            </div>
+
+
+
+
+                            <div class="col">
+
+
+                                <h5 class="text-uppercase">Pháp luật và xã hội</h5>
+
+                                <ul class="list-unstyled">
+                                    <li>
+                                        <a href="#!" id="link">Vụ án tiêu điểm</a>
+                                    </li>
+                                    <li>
+                                        <a href="#!" id="link">Ký sự pháp đình</a>
+                                    </li>
+                                    <li>
+                                        <a href="#!" id="link">Tư vấn pháp luật</a>
+                                    </li>
+
+                                </ul>
+
+                            </div>
+
+                            <div class="col">
+
+
+                                <h5 class="text-uppercase">Gia đình & sức khỏe</h5>
+
+                                <ul class="list-unstyled">
+                                    <li>
+                                        <a href="#!" id="link">Công lý trai tim</a>
+                                    </li>
+                                    <li>
+                                        <a href="#!" id="link">Sống khỏe mỗi ngày</a>
+                                    </li>
+                                    <li>
+                                        <a href="#!" id="link">Cẩm nang cuộc sống</a>
+                                    </li>
+
+                                </ul>
+
+                            </div>
+                            <div class="col">
+
+                                <h5 class="text-uppercase">Nhịp cầu bạn đọc</h5>
+
+                                <ul class="list-unstyled">
+                                    <li>
+                                        <a href="#!" id="link">Kết nối đa chiều</a>
+                                    </li>
+                                    <li>
+                                        <a href="#!" id="link">Hộp thư bạn đọc</a>
+                                    </li>
+                                    <li>
+                                        <a href="#!" id="link">Mắt thấy tai nghe</a>
+                                    </li>
+
+                                </ul>
+
+                            </div>
+                            <div class="col">
+
+                                <h5 class="text-uppercase">Hiệp sỹ đời thường</h5>
+
+                                <ul class="list-unstyled">
+                                    <li>
+                                        <a href="#!" id="link">Câu chuyện hôm nay</a>
+                                    </li>
+                                    <li>
+                                        <a href="#!" id="link">Anh hùng chân đất</a>
+                                    </li>
+                                    <li>
+                                        <a href="#!" id="link">Kết nối cộng đồng</a>
+                                    </li>
+
+                                </ul>
+
+                            </div>
+                        </div>
+                        <div class="row">
+
+                            <div class="col">
+
+
+                                <h5 class="text-uppercase">Quà tặng cuộc sống</h5>
+
+                                <ul class="list-unstyled">
+                                    <li>
+                                        <a href="#!" id="link">Sống có ích</a>
+                                    </li>
+                                    <li>
+                                        <a href="#!" id="link">Sống đẳng cấp</a>
+                                    </li>
+                                    <li>
+                                        <a href="#!" id="link">Sống với đam mê</a>
+                                    </li>
+
+                                </ul>
+
+                            </div>
+
+
+
+
+                            <div class="col">
+
+
+                                <h5 class="text-uppercase">Muôn nẻo đường đời</h5>
+
+                                <ul class="list-unstyled">
+                                    <li>
+                                        <a href="#!" id="link">Hộp đen cuộc sống</a>
+                                    </li>
+                                    <li>
+                                        <a href="#!" id="link">Dọc đường tác nghiệp</a>
+                                    </li>
+                                    <li>
+                                        <a href="#!" id="link">Những tấm lòng thơm thảo</a>
+                                    </li>
+
+                                </ul>
+
+                            </div>
+
+                            <div class="col">
+
+
+                                <h5 class="text-uppercase">Đông tây thế sự</h5>
+
+                                <ul class="list-unstyled">
+                                    <li>
+                                        <a href="#!" id="link">Đa chiều</a>
+                                    </li>
+                                    <li>
+                                        <a href="#!" id="link">Chuyện bốn phương</a>
+                                    </li>
+                                    <li>
+                                        <a href="#!" id="link">Hồ sơ-tư liệu</a>
+                                    </li>
+
+                                </ul>
+
+                            </div>
+                            <div class="col">
+
+                                <h5 class="text-uppercase">Xem - ăn - chơi</h5>
+
+                                <ul class="list-unstyled">
+                                    <li>
+                                        <a href="#!" id="link">Dậy sóng trên mạng</a>
+                                    </li>
+                                    <li>
+                                        <a href="#!" id="link">Mua gì ở đâu?</a>
+                                    </li>
+                                    <li>
+                                        <a href="#!" id="link">Không thể bỏ qua</a>
+                                    </li>
+
+                                </ul>
+
+                            </div>
+                            <div class="col">
+
+
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+
+
+            </footer>
+        </div>
+    </div>
+    <div class="col-md-12">
+        <div class="container">
+            <div class="copy">
+                <div class="logo-footer"><a><img src="~/Img/logop.png"></a></div>
+                <p id="copy-right">Tất cả những thông tin tòa soạn ở khu vực này tất cả những thông tin tòa soạn ở khu vực này tất cả những thông tin tòa soạn ở khu vực này tất cả những thông tin tòa soạn ở khu vực này tất cả những thông tin tòa soạn ở khu vực này tất cả những thông tin tòa soạn ở khu vực này tất cả những thông tin tòa soạn ở khu vực này tất cả những thông tin tòa soạn ở khu vực này</p>
+            </div>
+        </div>
+    </div>
+    <script src="~/Scripts/Blog.js"></script>
+</body>
+</html>
